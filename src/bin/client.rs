@@ -3,7 +3,7 @@ use std::thread::sleep;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 fn main() -> std::io::Result<()> {
-    let server_addr = "127.0.0.1:8080"; // Replace with your server's IP and port
+    let server_addr = "SERVER_IP:8080"; // Replace with your server's IP and port
     let socket = UdpSocket::bind("0.0.0.0:0")?; // Bind to any available local port
     socket.connect(server_addr)?;
 
